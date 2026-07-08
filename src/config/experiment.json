@@ -1,0 +1,31 @@
+{
+    "data_model": {
+        "me_data": {
+            "path": [
+                "src/assets/hospitals.csv",
+                "src/assets/Apogames.csv",
+                "src/assets/warehouses.csv",
+                "src/assets/random.csv",
+                "src/assets/randomLoose.csv",
+                "src/assets/randomTight.csv"
+            ],
+            "embedding_strategy": [
+                "ld", "hd"
+            ],
+                "similarity_method": [
+                "jaccard", "weighted"
+            ]
+        }
+    },
+    "searcher": { 
+        "tree": {
+            "tree_method": ["kdtree"],
+            "k_neighbors": [1, 256]
+        }
+    },
+    "matcher": {
+        "greedy": {
+            "similarity_threshold": [0, 1.0]
+        }
+    }
+}
